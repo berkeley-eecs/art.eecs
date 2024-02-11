@@ -1,0 +1,77 @@
+<%= form_with(model: art) do |form| %>
+  <% if art.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(art.errors.count, "error") %> prohibited this art from being saved:</h2>
+
+      <ul>
+        <% art.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.rich_text_area :description %>
+  </div>
+
+  <div>
+    <%= form.label :artist_name, style: "display: block" %>
+    <%= form.text_area :artist_name %>
+  </div>
+
+  <div>
+    <%= form.label :last_editor_id, style: "display: block" %>
+    <%= form.text_field :last_editor_id %>
+  </div>
+
+  <div>
+    <%= form.label :art_created_date, style: "display: block" %>
+    <%= form.date_field :art_created_date %>
+  </div>
+
+  <div>
+    <%= form.label :created_location, style: "display: block" %>
+    <%= form.text_field :created_location %>
+  </div>
+
+  <div>
+    <%= form.label :url, style: "display: block" %>
+    <%= form.text_field :url %>
+  </div>
+
+  <div>
+    <%= form.label :image, style: "display: block" %>
+    <%= form.file_field :image %>
+  </div>
+
+  <div>
+    <%= form.label :classification, style: "display: block" %>
+    <%= form.text_field :classification %>
+  </div>
+
+  <div>
+    <%= form.label :is_published, style: "display: block" %>
+    <%= form.check_box :is_published %>
+  </div>
+
+  <div>
+    <%= form.label :location_id, style: "display: block" %>
+    <%= form.text_field :location_id %>
+  </div>
+
+  <div>
+    <%= form.label :artist_id, style: "display: block" %>
+    <%= form.text_field :artist_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

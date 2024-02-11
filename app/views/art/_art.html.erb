@@ -1,0 +1,62 @@
+<div id="<%= dom_id art %>">
+  <p>
+    <strong>Title:</strong>
+    <%= art.title %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= art.description %>
+  </p>
+
+  <p>
+    <strong>Artist name:</strong>
+    <%= art.artist_name %>
+  </p>
+
+  <p>
+    <strong>Last editor:</strong>
+    <%= art.last_editor_id %>
+  </p>
+
+  <p>
+    <strong>Art created date:</strong>
+    <%= art.art_created_date %>
+  </p>
+
+  <p>
+    <strong>Created location:</strong>
+    <%= art.created_location %>
+  </p>
+
+  <p>
+    <strong>Url:</strong>
+    <%= art.url %>
+  </p>
+
+  <p>
+    <strong>Image:</strong>
+    <%= link_to art.image.filename, art.image if art.image.attached? %>
+  </p>
+
+  <p>
+    <strong>Classification:</strong>
+    <%= art.classification %>
+  </p>
+
+  <p>
+    <strong>Is published:</strong>
+    <%= art.is_published %>
+  </p>
+
+  <p>
+    <strong>Location:</strong>
+    <%= art.location_id %>
+  </p>
+
+  <p>
+    <strong>Artist:</strong>
+    <%= art.artist_id %>
+  </p>
+
+</div>
